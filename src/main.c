@@ -1,4 +1,6 @@
 #include "raylib.h"
+#include "snake.h"
+#include "food.h"
 
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 800
@@ -6,17 +8,6 @@
 #define GRID_BLOCK_SIZE 32
 #define MAX_SNAKE_SIZE 256
 #define MOVE_INTERVAL_SECS 0.15
-
-typedef struct Snake {
-    Vector2 pos;
-    Vector2 vel;
-    Color color;
-} Snake;
-
-typedef struct Food {
-    Vector2 pos;
-    Color color;
-} Food;
 
 int main(void) {
     InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "croba");
